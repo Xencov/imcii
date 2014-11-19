@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' />
+  </head>
+  <body>
+    <div class="col-md-12" style="text-align: center;">
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+    </div>
+    
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Upload Files</strong></div>
+        <div class="panel-body">
+
+          <!-- Standar Form -->
+          <h4>Select files from your computer</h4>
+          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="files[]" id="upload-files">
+              </div>              
+            </div>
+          </form>
+
+          <!-- Drop Zone -->
+          <h4>Or drag and drop files below</h4>
+          <div class="upload-drop-zone" id="drop-zone">
+            Just drag and drop files here
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="size">
+            Size: <span id="uploaded">0</span>/<span id="total">0</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+              <span class="sr-only">0% Complete</span>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div> <!-- /container -->
+    <script type="text/javascript" src='/javascripts/upload.js'></script>
+  </body>
+</html>
