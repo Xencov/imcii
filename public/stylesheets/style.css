@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -24,4 +23,14 @@ a {
 .upload-drop-zone.drop {
   color: #222;
   border-color: #222;
+}
+
+#converted-image {
+  min-height: 300px;
+  border: 1px solid #cccccc;
+}
+
+#converted-image img {
+  margin: 0 auto;
+  display: block;
 }

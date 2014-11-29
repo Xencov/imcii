@@ -11,6 +11,8 @@ var upload = require('./routes/upload');
 
 var app = express();
 
+global.__appBaseDir = __dirname;
+
 app.use(multer({
   dest: './uploads/',
   onFileUploadStart: function (file) {

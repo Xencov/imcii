@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/justified-nav.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="/javascripts/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/javascripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<a href="https://github.com/SourceWare/imcii"><img style="position: absolute; top: 0; right: 0; border: 0;z-index: 1"
+                                                   src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
+                                                   alt="Fork me on GitHub"
+                                                   data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="container">
+
+    <div class="masthead">
+        <div role="navigation">
+            <ul class="nav nav-justified">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">SourceWare</a></li>
+                <li><a href="#">See what others are upto!</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <p class="lead"><img src="/images/imcii_logo.png"/></p>
+
+        <p> Convert your images to ASCII</p>
+        <!--<p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>-->
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-lg-6">
+            <!--<h3>Drop your image (one at a time)</h3>-->
+            <h4>Select an image from your computer (*.png)</h4>
+
+            <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input type="file" name="files[]" id="upload-files">
+                    </div>
+                </div>
+            </form>
+
+            <!-- Drop Zone -->
+            <h4>Or drag and drop the image below</h4>
+
+            <div class="upload-drop-zone" id="drop-zone">
+                Just drag and drop files here
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="size">
+                <small>Size: <span id="uploaded">0</span>/<span id="total">0</span></small>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only">0% Complete</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h4>Your Converted Image will appear here</h4>
+            <p id='converted-image'>
+
+            </p>
+        </div>
+    </div>
+
+    <!-- Site footer -->
+    <footer class="footer">
+        <p>&copy; <a href="https://github.com/SourceWare">SourceWare</a> 2014</p>
+    </footer>
+
+</div>
+<!-- /container -->
+
+<!-- Script files -->
+<script type="text/javascript" src='/javascripts/upload.js'></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/javascripts/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

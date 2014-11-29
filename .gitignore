@@ -5,5 +5,9 @@ logs
 # Dependency directory
 node_modules
 
-# Users Environment Variables
+#Upload dir
+uploads
+
+#Users Environment Directory
+design
 

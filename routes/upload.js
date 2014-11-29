@@ -1,27 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var image = require('../custom_modules/imageToAscii');
 
-router.post('/image', function(req, res){  
-  //Todo do the external image processing and send the buffer to the client
-  
-  res.status(200).end(req.files.file.buffer.toString('base64'));
+router.post('/image', function (req, res) {
+  var file = req.files.file;
+  image.convertToASCII(file.buffer, file.name, file.colored, file.height, file.width, function (asciiBuffer) {
+    res.status(200).end(asciiBuffer);
+  });
 });
 
 module.exports = router;
-
-
-
-var ImageToAscii = require("image-to-ascii");
-
-var imcii = new ImageToAscii({
-    resize: {
-        height: "100%",
-        width: "50%"
-    },
-    multiplyWidth: 1,
-    colored: true
-});
-
-imcii.convert(__dirname + "/nodeconfin.png", function(err, converted) {
-    console.log(err || converted);
-});
