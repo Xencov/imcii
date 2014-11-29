@@ -1,6 +1,6 @@
 ##IMCII
 
-** IMAGE + ASCII == IMCII **
+**IMAGE + ASCII == IMCII**
 
 Fun application converts images to their ascii equivalents
 
@@ -10,7 +10,7 @@ Upload Images and their ASCII equivalent image will be processed within seconds
 
 You can right click the converted image and save them as `png`.
 
-![imcii screenshot](/public/images/screenshot.png?raw=true "Optional Title")
+![imcii screenshot](/public/images/screenshot.png?raw=true "IMCII Screenshot")
 
 
 ##Roadmap
