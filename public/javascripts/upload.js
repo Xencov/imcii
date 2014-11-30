@@ -35,6 +35,11 @@ function ParseFile(file) {
 }
 
 function UploadFile(file) {
+  var loader = document.getElementById('spinner');
+  var container = document.getElementById('container');
+  loader.style.display = 'block';
+  container.style['-webkit-filter'] = 'blur(10px)';
+  container.style['filter'] = 'blur(10px)';
   var xhr = new XMLHttpRequest();
   var formData = new FormData();
   formData.append('file', file);
@@ -63,6 +68,9 @@ function UploadFile(file) {
       img.setAttribute('height', '300');
       img.setAttribute('width', '500');
       var imageContainer = document.getElementById('converted-image');
+      loader.style.display = 'none';
+      container.style['-webkit-filter'] = 'blur(0px)'
+      container.style['filter'] = 'blur(0px)'
       imageContainer.appendChild(img);
     }
   }
