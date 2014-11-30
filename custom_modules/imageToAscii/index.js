@@ -1,1 +1,1 @@
-module.exports = require('./lib/imageToAscii');
+module.exports = require('./lib/imageToAscii.js');
