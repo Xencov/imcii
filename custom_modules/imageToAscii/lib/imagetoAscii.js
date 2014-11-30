@@ -51,8 +51,9 @@ var Image = {
     getImageFromASCIIString: function (asciiString, imageBuffer) {
       console.log(asciiString);
       var info = Image.public.getSize(imageBuffer);
-      var canvas = new Canvas(info.width, info.height),
+      var canvas = new Canvas(info.width + info.width, info.height),
         ctx = canvas.getContext('2d');
+      ctx.font = '11pt monospace';
       ctx.fillStyle = "#000000";
       return Image.private.wrapText(ctx, asciiString, 1, 10, info.width, 12, canvas);
     },
@@ -71,9 +72,7 @@ var Image = {
       var words = text.split('\n');
       var line = '';
       for (var n = 0; n < words.length; n++) {
-        line = words[n].replace(/(\!)|(\s)|(\;)/ig, function(match){
-          return match + ' ';
-        });
+        line = words[n];
         context.fillText(line, x, y);
         y += lineHeight;
       }
@@ -81,7 +80,6 @@ var Image = {
     }
   }
 };
-
 
 module.exports = Image.public;
 

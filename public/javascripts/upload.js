@@ -60,6 +60,8 @@ function UploadFile(file) {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var img = new Image();
       img.src = xhr.response;
+      img.setAttribute('height', '300');
+      img.setAttribute('width', '500');
       var imageContainer = document.getElementById('converted-image');
       imageContainer.appendChild(img);
     }
