@@ -31,9 +31,9 @@ var Image = {
       }
       buffer = image;
       var info = Image.public.getSize(buffer);
-      if (info.type != 'png') {
+      /*if (info.type != 'png') {
         return Image.private.convertToPNG(buffer, info.width, info.height);
-      }
+      }*/
       return buffer;
     }
   },
